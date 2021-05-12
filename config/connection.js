@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-module.exports = new Sequelize('trails_db', 'root', 'G28H6Bxp?', {
+module.exports = new Sequelize('trails_db', 'root', 'Danzig55', {
   host: 'localhost',
   dialect: 'mysql',
   operatorsAliases: false,
