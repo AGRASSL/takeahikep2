@@ -1,0 +1,62 @@
+[
+    {
+      "nayme": "Lakefront Trail",
+      "location": "Illinois",
+      "length": "18.5"
+    },
+    {
+      "nayme": "Nugget Falls Trail",
+      "location": "Alaska",
+      "length": "700"
+    },
+    {
+      "nayme": "Appalachian Trail",
+      "location": "Virginia",
+      "length": "500"
+    },
+    {
+      "nayme": "Burroughs Mountain Hike",
+      "location": "Washington",
+      "length": "260"
+    },
+    {
+      "nayme": "Halema'uma'u Trail",
+      "location": "Hawaii",
+      "length": "1"
+    },
+    {
+        "nayme": "Charlies Bunion Hike",
+        "location": "North Carolina",
+        "length": "100"
+      },
+      {
+        "nayme": "Billy Goat Trail",
+        "location": "Maryland",
+        "length": "4"
+      },
+      {
+        "nayme": "Kalalau Trail",
+        "location": "Hawaii",
+        "length": "11"
+      },
+      {
+        "nayme": "Chautauqua Trail",
+        "location": "Colorado",
+        "length": "15"
+      },
+      {
+        "nayme": "Canyon to Rim Loop",
+        "location": "Oregon",
+        "length": "2-7"
+      },
+      {
+        "nayme": "Petroglyph Wall Trail",
+        "location": "Nevada",
+        "length": "5"
+      },
+      {
+        "nayme": "Mount Ida Trail",
+        "location": "Colorado",
+        "length": "300"
+      }
+  ]

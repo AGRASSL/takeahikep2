@@ -1,0 +1,32 @@
+  <section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add A Trail</h1>
+      <p>Add a Trail that you've gone on</p>
+      {{#each errors}}
+      <div class="error">
+          <p>{{text}}</p>
+      </div>
+      {{/each}}
+      <form action="/trails/add" method="POST">
+        <div class="input-group">
+          <label for="title">Trip Count</label>
+          <input type="text" name="id" id="id" class="input-box" placeholder="eg. 1, 2, 3, ..." maxlength="100" value={{id}}>
+        </div>
+        <div class="input-group">
+          <label for="title">Trail Name</label>
+          <input type="text" name="nayme" id="nayme" class="input-box" placeholder="eg. zion national park, yosemite national park, great smokey mountains"
+            maxlength="100" value={{nayme}}>
+        </div>
+        <div class="input-group">
+          <label for="location">Trail Location</label>
+          <input type="text" name="location" id="location" class="input-box" placeholder="eg. Tennessee, Montana, North Carolina"
+          maxlength="100" value={{location}}>
+        </div>
+        <div class="input-group">
+          <label for="length">Trail Length (in Miles)</label>
+          <input type="number" name="length" id="length" class="input-box" placeholder="eg. 10, 15, 20" value={{length}}>
+        </div>
+        <input type="submit" value="Add Trip" class="btn btn-reverse">
+      </form>
+      </div>
+  </section>

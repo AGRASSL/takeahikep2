@@ -1,0 +1,17 @@
+ <section id="gigs" class="container">
+    <h1>All Trails</h1>
+
+    {{#each trails}}
+    <div class="gig">
+      <h3>{{nayme}}</h3>
+      <p>{{location}}</p>
+      <ul>
+        <li>{{length}}</li>
+      </ul>
+    </div>
+    {{else}}
+    <p>no trials were found</p>
+    {{/each}}
+
+
+  </section>
