@@ -4,6 +4,8 @@ const db = require('../config/connection');
 const Trails = require('../models/Trails');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
+const withAuth = require('../utils/auth');
+const User = require('../models/User');
 
 // Get Trails List
 router.get('/', (req, res) => 
@@ -65,5 +67,15 @@ router.get('/search', (req, res) => {
     .then(trails => res.render('trails', { trails }))
     .catch(err => console.log(err));
 });
+
+router.get('/login', (req, res) => {
+    // If the user is already logged in, redirect the request to another route
+    if (req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('login');
+  });
 
 module.exports = router;
