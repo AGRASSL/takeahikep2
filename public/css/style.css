@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 :root {
-  --primary-color: #568c9b;
+  --primary--or: #568c9b;
   --primary-hover-color: #64a5b7;
   --bg-color: #333;
   --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
@@ -298,3 +298,15 @@ label {
     width: 100%;
   }
 }
+
+
+
+/* login page */
+  .col-md-6{
+    padding-left: 50px;
+  
+  }
+
+  .col-md-6 button{
+    background-color: green;}
+
