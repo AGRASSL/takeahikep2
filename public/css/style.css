@@ -67,6 +67,13 @@ header nav li {
 }
 
 
+
+.inner nav ul li :hover{
+  color: green;
+}
+
+
+
 header.inner {
   background: var(--bg-color);
   border-bottom: 4px solid var(--primary-color);
@@ -309,4 +316,8 @@ label {
 
   .col-md-6 button{
     background-color: green;}
+
+    .row {
+      background-image: none;
+    }
 
