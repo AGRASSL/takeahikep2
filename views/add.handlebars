@@ -1,7 +1,7 @@
   <section id="addTrip" class="container">
     <div class="form-wrap">
       <h1>Add A Blog Post</h1>
-      <p>Add a Trail that you've gone on</p>
+      <p>Add a Blog Post of a trail that you've been on!</p>
       {{#each errors}}
       <div class="error">
           <p>{{text}}</p>
@@ -9,7 +9,7 @@
       {{/each}}
       <form action="/add" method="POST">
         <div class="input-group">
-          <label for="title">Trip Count</label>
+          <label for="title">Blog Entry...</label>
           <input type="text" name="id" id="id" class="input-box" placeholder="eg. 1, 2, 3, ..." maxlength="100" value={{id}}>
         </div>
         <div class="input-group">
@@ -23,17 +23,17 @@
           maxlength="100" value={{location}}>
         </div>
         <div class="input-group">
-          <label for="length">Trail Length (in Miles)</label>
+          <label for="length">How Long Did You Hike? (in Miles)</label>
           <input type="number" name="length" id="length" class="input-box" placeholder="eg. 10, 15, 20" value={{length}}>
         </div>
         <div class="input-group">
-          <label for="blog">Journal Away!</label>
+          <label for="blog">Blog Away!</label>
           <input type="text" name="blog" id="blog" class="input-box" placeholder="What an amazing adventure..." >
         </div>
         {{!-- new --}}
         <button type="submit" value="Add Trip" 
         id = "wtf"
-        class="btn btn-reverse">Add Trip</button>
+        class="btn btn-reverse">Add Blog Entry</button>
       </form>
       </div>
 
