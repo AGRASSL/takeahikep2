@@ -4,8 +4,6 @@ const db = require('../config/connection');
 const Trails = require('../models/Trails');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
-const withAuth = require('../utils/auth');
-const User = require('../models/User');
 
 // Get Trails List
 router.get('/', (req, res) => 
@@ -17,7 +15,7 @@ Trails.findAll()
 })
 .catch(err => console.log(err)));
 
-//display add trial form
+//display add blog form
 router.get('/add', (req, res) => res.render('add'));
 
 //Route to add trail
@@ -34,10 +32,10 @@ if(!location) {
     errors.push({ text: 'please insert a location'});
 }
 if(!length) {
-    errors.push({ text: 'please insert a distance'});
+    errors.push({ text: 'please insert a trail length'});
 }
-if(!length) {
-    errors.push({ text: 'please insert a blog post'});
+if(!blog) {
+    errors.push({ text: 'please enter a blog post'});
 }
 
 //check for errors
@@ -59,28 +57,18 @@ Trails.create({
     blog
 })
 
-.then(trails => res.redirect('/'))
+.then(trails => res.redirect('/trails'))
 .catch(err => console.log(err));
 }   
 });
 
 //search for trips
-router.get('/', (req, res) => {
+router.get('/search', (req, res) => {
     const { term } = req.query;
 
     Trails.findAll({ where: { location: { [Op.like]: '%' + term + '%' }}})
     .then(trails => res.render('trails', { trails }))
     .catch(err => console.log(err));
 });
-
-router.get('/login', (req, res) => {
-    // If the user is already logged in, redirect the request to another route
-    if (req.session.logged_in) {
-      res.redirect('/');
-      return;
-    }
-  
-    res.render('login');
-  });
 
 module.exports = router;
