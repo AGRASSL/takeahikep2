@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/connection');
+const { sequelize } = require('./User');
 
 const Trails = db.define('trails', {
     id: {
@@ -18,6 +19,11 @@ const Trails = db.define('trails', {
     blog: {
         type: Sequelize.STRING
     }
-})
+
+});
+
+
+
+
 
 module.exports = Trails;
