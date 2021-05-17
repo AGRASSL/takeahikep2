@@ -25,12 +25,6 @@ const sess = {
 
 app.use(session(sess));
 
-// Test DB
-// db.authenticate()
-//   .then(() => console.log('Database connected...'))
-//   .catch(err => console.log('error' + err))
-
-
 
 
 //handlebars
@@ -52,10 +46,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // //Index Route
-// app.get('/', (req, res) => res.render('index', { layout: 'login' }));
-
-// //Making /home the main page after login?
-// app.get('/home', (req, res) => res.render('index', { layout: 'main' }));
+app.get('/', (req, res) => res.render('index', { layout: 'main' }));
 
 // //Trails routes
 // app.use('/trails', require('./routes/trails'));

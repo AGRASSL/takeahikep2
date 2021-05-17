@@ -14,6 +14,9 @@ const Trails = db.define('trails', {
     },
     length: {
         type: Sequelize.INTEGER
+    },
+    blog: {
+        type: Sequelize.STRING
     }
 })
 
