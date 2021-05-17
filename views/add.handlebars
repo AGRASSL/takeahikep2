@@ -1,4 +1,4 @@
-  <section id="add" class="container">
+  <section id="addTrip" class="container">
     <div class="form-wrap">
       <h1>Add A Blog Post</h1>
       <p>Add a Trail that you've gone on</p>
@@ -15,7 +15,7 @@
         <div class="input-group">
           <label for="title">Trail Name</label>
           <input type="text" name="nayme" id="nayme" class="input-box" placeholder="eg. zion national park, yosemite national park, great smokey mountains"
-            maxlength="100" value={{nayme}}> 
+            maxlength="100" value={{nayme}} {{log nayme}}> 
         </div>
         <div class="input-group">
           <label for="location">Trail Location</label>
@@ -28,9 +28,15 @@
         </div>
         <div class="input-group">
           <label for="blog">Journal Away!</label>
-          <input type="text" name="blog" id="blog" class="input-box" placeholder="What an amazing adventure..." value={{blog}}>
+          <input type="text" name="blog" id="blog" class="input-box" placeholder="What an amazing adventure..." >
         </div>
-        <input type="submit" value="Add Trip" class="btn btn-reverse">
+        {{!-- new --}}
+        <button type="submit" value="Add Trip" 
+        id = "wtf"
+        class="btn btn-reverse">Add Trip</button>
       </form>
       </div>
+
   </section>
+
+  <script src= "/js/data.js"></script>

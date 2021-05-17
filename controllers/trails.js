@@ -23,7 +23,8 @@ router.get('/add', (req, res) => res.render('add'));
 //Route to add trail
 router.post('/add', (req, res) => {
 
-let { id, nayme, location, length, blog } = req.body;
+let { id, location, length, blog } = req.body.data;
+let nayme = req.body.data.name
 let errors = [];
 
 //validate fields
@@ -40,6 +41,8 @@ if(!length) {
     errors.push({ text: 'please insert a blog post'});
 }
 
+console.log("this is it", req.body)
+
 //check for errors
 if(errors.length > 0) {
     res.render('add', {
@@ -51,6 +54,7 @@ if(errors.length > 0) {
     });
 } else{
 //insert into table
+console.log(id, nayme, location)
 Trails.create({
     id,
     nayme,
@@ -58,6 +62,7 @@ Trails.create({
     length,
     blog
 })
+
 
 .then(trails => res.redirect('/'))
 .catch(err => console.log(err));

@@ -21,45 +21,45 @@ router.get('/add', (req, res) => res.render('add'));
 //Route to add trail
 router.post('/add', (req, res) => {
 
-let { id, nayme, location, length, blog } = req.body;
+console.log(req.body, "route hit")
+
+// let { id, nayme, location, length, blog } = req.body;
 let errors = [];
 
-//validate fields
-if(!nayme) {
-    errors.push({ text: 'please insert a name'});
-}
-if(!location) {
-    errors.push({ text: 'please insert a location'});
-}
-if(!length) {
-    errors.push({ text: 'please insert a trail length'});
-}
-if(!blog) {
-    errors.push({ text: 'please enter a blog post'});
-}
-
-//check for errors
-if(errors.length > 0) {
-    res.render('add', {
-        errors,
-        nayme,
-        location,
-        length,
-        blog
-    });
-} else{
-//insert into table
 Trails.create({
-    id,
-    nayme,
-    location,
-    length,
-    blog
+    id: req.body.id,
+    nayme: req.body.name,
+    location: req.body.location,
+    length: req.body.length,
+    blog: req.body.blog
 })
 
-.then(trails => res.redirect('/trails'))
-.catch(err => console.log(err));
-}   
+.then(trails => res.json(trails))
+.catch(err => console.log(err))
+
+//validate fields
+// if(!nayme) {
+//     errors.push({ text: 'please insert a name'});
+// }
+// if(!location) {
+//     errors.push({ text: 'please insert a location'});
+// }
+// if(!length) {
+//     errors.push({ text: 'please insert a trail length'});
+// }
+// if(!blog) {
+//     errors.push({ text: 'please enter a blog post'});
+// }
+
+// //check for errors
+// if(errors.length > 0) {
+//     res.render('add', {
+//         errors,
+//         nayme,
+//         location,
+//         length,
+//         blog
+//     });
 });
 
 //search for trips
