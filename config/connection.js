@@ -4,7 +4,7 @@ require('dotenv').config()
 
 module.exports = process.env.JAWSDB_URL 
 ? new Sequelize(process.env.JAWSDB_URL)
-: new Sequelize('hike_db', 'root', 'pw', {
+: new Sequelize('hike_db', 'root', 'UncleSamIAm88', {
   
     host: 'localhost',
     dialect: 'mysql',
