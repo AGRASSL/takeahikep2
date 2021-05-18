@@ -7,7 +7,7 @@ Direct link to app:
 https://p2v2takeahike.herokuapp.com/
 
 Home page  
-[Screenshot1](
+[Screenshot1](images/Screen Shot 2021-05-17 at 6.22.08 PM.png)
 
 Result:  
 In this application we utilized the National Parks API to implement a search for hiking trails. Ultimately, TakeAHike allows the user to keep a list of hikes they want to take. Once the hike is selected, a brief description of the hike including; name, location, style of hike, contact number, operating hours, pictures and entrance fees.
