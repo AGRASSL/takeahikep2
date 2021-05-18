@@ -1,3 +1,4 @@
+![Screen Shot 2021-05-17 at 6 22 08 PM](https://user-images.githubusercontent.com/77944651/118576388-08543300-b74e-11eb-9752-559e21353773.jpg)
 # takeAhike
 
 ##TakeAHike:  
